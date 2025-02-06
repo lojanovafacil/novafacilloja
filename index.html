@@ -1832,11 +1832,12 @@ var myvar = '<div id="frete" class="shipping-info-by-fireapps">'+
     <div id="shopify-section-footer" class="shopify-section"><footer class="footer" data-section-id="footer" data-section-type="footer" role="contentinfo">
   <div class="container">
     <div class="footer__wrapper"><div class="footer__block-list"><div class="footer__block-item footer__block-item--text" >
-                  <button class="footer__title heading h6" disabled aria-expanded="false" aria-controls="block-footer-0" data-action="toggle-collapsible">
-                    <span>Sobre Nós</span>
-                    <span class="plus-button"></span>
-                  </button>
+      <button class="footer__title heading h6" aria-expanded="false" aria-controls="sobre-nos" onclick="toggleSobreNos()">
+  <span>Sobre Nós</span>
+  <span class="plus-button"></span>
+</button>
 
+<div id="sobre-nos" class="footer-content" style="display: none;">
                   <div id="block-footer-0" class="footer__collapsible">
                     <div class="footer__collapsible-content">
                       <div class="rte">
