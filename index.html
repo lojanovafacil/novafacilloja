@@ -57,8 +57,8 @@ Se a garrafa não estiver completamente cheia, é recomendável encher a garrafa
   /* We load the font used for the integration with Shopify Reviews to load our own stars */
   @font-face {
     font-family: "font-theme-star";
-    src: url(//novafacilbrasil.store/cdn/shop/t/3/assets/font-theme-star.eot?v=178649971611478077551734140543);
-    src: url(//novafacilbrasil.store/cdn/shop/t/3/assets/font-theme-star.eot?%23iefix&v=178649971611478077551734140543) format("embedded-opentype"), url(//novafacilbrasil.store/cdn/shop/t/3/assets/font-theme-star.woff2?v=176977276741202493121734140543) format("woff2"), url(//novafacilbrasil.store/cdn/shop/t/3/assets/font-theme-star.ttf?v=17527569363257290761734140543) format("truetype");
+    src: url(///cdn/shop/t/3/assets/font-theme-star.eot?v=178649971611478077551734140543);
+    src: url(//novafacilbrasil.store/cdn/shop/t/3/assets/font-theme-star.eot?%23iefix&v=178649971611478077551734140543) format("embedded-opentype"), url(//novafacilbrasil.store/cdn/shop/t/3/assets/font-theme-star.woff2?v=176977276741202493121734140543) format("woff2"), url(///cdn/shop/t/3/assets/font-theme-star.ttf?v=17527569363257290761734140543) format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
@@ -1311,12 +1311,17 @@ for (var attr in meta) {
     <!--FIM FRETE OPÇÃO 02-->
     
     
-    <div id="loader" class="loader"></div>
-      <div class="product-form__payment-container"><button type="submit" class="product-form__add-button button button--primary" data-action="add-to-cart">Comprar agora</button></div><input type="hidden" name="product-id" value="8090950697005" /><input type="hidden" name="section-id" value="product-template" /></form><script>
-jQuery(window).load(function () {
-      $(".loader").fadeOut("slow"); //retire o delay quando for copiar!
-    $("#tudo_page").toggle("fast");
-});
+    <div class="product-form__payment-container">
+    <button type="button" id="whatsappButton" class="button button--primary">
+        Comprar agora
+    </button>
+</div>
+
+<script>
+    document.getElementById("whatsappButton").addEventListener("click", function() {
+        // Substitua o número abaixo pelo seu número de WhatsApp no formato internacional (55 para Brasil)
+        window.location.href = "https://wa.me/5511948273809?text=Olá,%20tenho%20interesse%20no%20produto!";
+    });
 </script>
         
      <!-- INÍCIO NÓS ACEITAMOS -->
@@ -1441,12 +1446,12 @@ jQuery(window).load(function () {
 	<script>dayjs.locale('pt-br')</script>
       
       <div id="scrollToTop" class="botaoflutuante">        
-      		<span class="button button--primary" id="clicar" data-action="add-to-cart">Comprar agora</span>
+      		<button class="button button--primary" id="clicar" data-action="add-to-cart">Comprar agora</button>
           
           <script>
-            $("#clicar").on("click", function() {
-              $(".product-form__add-button").trigger("click");
-            });
+          $("#clicar").on("click", function() {
+    window.location.href = "https://wa.me/5511948273809?text=Olá,%20tenho%20interesse%20no%20produto!";
+});
           </script>
     	</div>
    
